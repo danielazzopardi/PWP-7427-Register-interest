@@ -1,3 +1,21 @@
+//----------------------------------*\
+// BASE UNITS
+//----------------------------------*/
+$gap: 10px;
+$gap-double: 20px;
+$gap-triple: 30px;
+
+//----------------------------------*\
+// COLOURS
+//----------------------------------*/
 $base : #F7F6F0;
 $darken : darken(#F7F6F0 , 30%);
 $back: darken(#F7F6F0, 40%);
+
+$dark-grey: #363635;
+$light-grey: #e1e1e1;
+$lightest-grey: #f5f5f5;
+
+$dark-green: #0C8571;
+
+$white: #fff;

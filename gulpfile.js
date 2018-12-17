@@ -9,6 +9,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     cssnano = require('gulp-cssnano'),
     sourcemaps = require('gulp-sourcemaps'),
+    nunjucksRender = require('gulp-nunjucks-render'),
     package = require('./package.json');
 
 
@@ -30,8 +31,8 @@ gulp.task('css', function () {
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer('last 4 version'))
     .pipe(gulp.dest('app/assets/css'))
-    .pipe(cssnano())
-    .pipe(rename({ suffix: '.min' }))
+    // .pipe(cssnano({minifyFontValues: false, zindex: false}))
+    // .pipe(rename({ suffix: '.min' }))
     .pipe(header(banner, { package : package }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('app/assets/css'))
@@ -42,7 +43,7 @@ gulp.task('js',function(){
   gulp.src('src/js/scripts.js')
     .pipe(sourcemaps.init())
     .pipe(jshint('.jshintrc'))
-    .pipe(jshint.reporter('default'))
+    .pipe(jshint.reporter('default', {devel:true}))
     .pipe(header(banner, { package : package }))
     .pipe(gulp.dest('app/assets/js'))
     .pipe(uglify())
@@ -53,6 +54,16 @@ gulp.task('js',function(){
     .pipe(gulp.dest('app/assets/js'))
     .pipe(browserSync.reload({stream:true, once: true}));
 });
+
+gulp.task('vendorjs', function(){
+  gulp.src('src/js/vendor/*.js')
+    .pipe(sourcemaps.init())
+    .pipe(jshint('.jshintrc'))
+    .pipe(jshint.reporter('default', {devel:true}))
+    .pipe(header(banner, { package : package }))
+    .pipe(gulp.dest('app/assets/js'))
+    .pipe(uglify())
+})
 
 gulp.task('browser-sync', function() {
     browserSync.init(null, {
@@ -65,8 +76,21 @@ gulp.task('bs-reload', function () {
     browserSync.reload();
 });
 
-gulp.task('default', ['css', 'js', 'browser-sync'], function () {
+gulp.task('nunjucks', function() {
+  // Gets .html and .nunjucks files in pages
+  return gulp.src('pages/**/*.+(html|nunjucks|njk)')
+  // Renders template with nunjucks
+  .pipe(nunjucksRender({
+      path: ['templates']
+    }))
+  // output files in app folder
+  .pipe(gulp.dest('app'))
+});
+
+gulp.task('default', ['css', 'js', 'vendorjs', 'browser-sync'], function () {
     gulp.watch("src/scss/**/*.scss", ['css']);
-    gulp.watch("src/js/*.js", ['js']);
+    gulp.watch("src/js/**/*.js", ['js']);
+    gulp.watch("src/js/**/*.js", ['vendorjs']);
+    gulp.watch("templates/**/*.njk", ['nunjucks']);
     gulp.watch("app/*.html", ['bs-reload']);
 });

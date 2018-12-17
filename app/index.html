@@ -1,8 +1,9 @@
-<!doctype html>
-<html class="no-js">
+<!-- layout.nunjucks -->
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>FastShell by @_Karamii</title>
+    <meta charset="UTF-8">
+    <title>Register Interest</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
@@ -10,51 +11,603 @@
 
     <link href="//www.google-analytics.com" rel="dns-prefetch">
     <link href="//ajax.googleapis.com" rel="dns-prefetch">
-    <link href="assets/css/style.min.css" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="https://www-cms-uat.deakin.edu.au/designs/cs/normalize.css" media="all">
+    <link rel="stylesheet" href="https://www-cms-uat.deakin.edu.au/designs/cs/perfoormance-css/base.css" media="screen">
+    <link rel="stylesheet" href="https://www-cms-uat.deakin.edu.au/designs/cs/perfoormance-css/components.css" media="screen">
+    <link rel="stylesheet" href="https://www-cms-uat.deakin.edu.au/designs/cs/perfoormance-css/fonts.css" media="screen">
+    <link rel="stylesheet" href="https://www-cms-uat.deakin.edu.au/designs/cs/perfoormance-css/modules.css" media="screen">
+    <link rel="stylesheet" href="https://www-cms-uat.deakin.edu.au/designs/cs/perfoormance-css/utilities.css" media="screen">
+    <link rel="stylesheet" href="https://www-cms-uat.deakin.edu.au/designs/cs/lightgallery.css" media="screen">
+    <link rel="stylesheet" href="https://www-cms-uat.deakin.edu.au/__data/assets/css_file/0004/556366/printcss.css" media="print">
+    <link rel="shortcut icon" href="//www-cms-uat.deakin.edu.au/designs/public/favicon.ico" type="image/x-icon">
+
+    <link href="assets/css/style.css" rel="stylesheet">
 
     <script src="assets/components/modernizr/modernizr.js"></script>
   </head>
   <body>
+    <!-- You write code for this content block in another file -->
+    
 
-    <header class="header" role="banner">
-      <div class="logo">
-        <a href="/">
-          <img src="assets/img/logo.png" alt="Logo">
-        </a>
-      </div>
-      <nav class="nav" role="navigation">
+    <!-- Adds the navigation partial -->
+    <header id="header" class="header">
+    <!-- Network Links -->
+    <div id="header__network-links" class=" network-links noindex">
         <ul>
-          <li>
-            <a href="/"></a>
-          </li>
+            <li class="network-links__list-item"><a tabindex="0" href="#main-content" class="network-links__link network-links__link--skip">Skip to main content</a></li>
+            <li class=" network-links__list-item network-links__expendable hidden"><a href="#" class="lang-toggle network-links__link">Change Language</a>
+                <ul class=" lang-dropdown__list">
+                    <li class=" lang-dropdown__list-item hidden"><a title="English" href="" class="lang-dropdown__list-link"><span><span class="hidden">Language English</span>English</span></a></li>
+                    <li class=" lang-dropdown__list-item hidden"><a title="Russian" href="" class="lang-dropdown__list-link"><span><span class="hidden">Language Russian</span>Pусский</span></a></li>
+                    <li class=" lang-dropdown__list-item hidden"><a title="Chinese" href="" class="lang-dropdown__list-link"><span><span class="hidden">Language Chinese</span>中国</span></a></li>
+                    <li class=" lang-dropdown__list-item hidden"><a title="Korean" href="" class="lang-dropdown__list-link"><span><span class="hidden">Language Korean</span>한국어</span></a></li>
+                    <li class=" lang-dropdown__list-item hidden"><a title="Chinese" href="" class="lang-dropdown__list-link"><span><span class="hidden">Language Chinese</span>中國</span></a></li>
+                    <li class=" lang-dropdown__list-item hidden"><a title="Spanish" href="" class="lang-dropdown__list-link"><span><span class="hidden">Language Spanish</span>Español</span></a></li>
+                    <li class=" lang-dropdown__list-item hidden"><a title="Vietnamese" href="" class="lang-dropdown__list-link"><span><span class="hidden">Language Vietnamese</span>tiếng Việt</span></a></li>
+                    <li class=" lang-dropdown__list-item hidden"><a title="Portugese" href="" class="lang-dropdown__list-link"><span><span class="hidden">Language Portugese</span>Português</span></a></li>
+                    <li class=" lang-dropdown__list-item hidden"><a title="Malaysian" href="" class="lang-dropdown__list-link"><span><span class="hidden">Language Malaysian</span>Bahasa Malaysia</span></a></li>
+                    <li class="lang-dropdown__list-item hidden"><a title="Thai" href="" class="lang-dropdown__list-link"><span><span class="hidden">Language Thai</span>ภาษาไทย</span></a></li>
+                    <li class=" lang-dropdown__list-item hidden"><a title="Indonesian" href="" class="lang-dropdown__list-link"><span><span class="hidden">Language Indonesian</span>Bahasa Indonesia</span></a></li>
+                    <li class=" lang-dropdown__list-item hidden"><a title="Arabic" href="" class="lang-dropdown__list-link"><span><span class="hidden">Language Arabic</span>العربية</span></a></li>
+                </ul>
+            </li>
+            <li class=" network-links__list-item"><a href="//www-cms-uat.deakin.edu.au/international-students" class="network-links__link">International Students</a></li>
+            <li class=" network-links__list-item"><a href="//www-cms-uat.deakin.edu.au/career-practitioners" class="network-links__link">Career practitioners</a></li>
+            <li class=" network-links__list-item"><a href="//www-cms-uat.deakin.edu.au/library" class="network-links__link link__external" target="_blank">Library</a></li>
+            <li class=" network-links__list-item"><a href="//sync.deakin.edu.au" class="network-links__link link__external" target="_blank">Staff</a></li>
+            <li class=" network-links__list-item"><a href="//www-cms-uat.deakin.edu.au/students" class="network-links__link link__external" target="_blank">Current students</a></li>
+            <li class=" network-links__list-item"><a href="//www-cms-uat.deakin.edu.au/contact-us" class="network-links__link">Contact Deakin</a></li>
+            <li class=" network-links__list-item"><a href="//www-cms-uat.deakin.edu.au/my-courses" class="network-links__link course__count">My Courses<i>0</i></a></li>
         </ul>
-      </nav>
-    </header>
+    </div>
+    <div id="header__bar" class="">
+        <div class="toggle__backing"></div>
+        <div id="header__bar--inner">
+            <div id="main-logo" class="main-logo">
+                <a href="//www-cms-uat.deakin.edu.au" class="main-logo__link" title="Deakin University Australia">
+                <span class="main-logo__assistive-text">Deakin University Australia</span>
+                <img class="main-logo__image" src="https://www-cms-uat.deakin.edu.au/__data/assets/image/0007/1146985/logo_deakin-rebrand-stacked.png" alt="Deakin University Australia">
+            </a>
+            </div>
+        </div>
+        <div id="search-bar__wrapper--outer">
+            <div class="grid">
+                <div id="search-bar__wrapper" class="cell cell--4-col cell--offset-6-col-large cell--offset-8-col-x-large">
+                    <button type="button" role="button" aria-label="Toggle Search" id="search-bar__toggle" tabindex="-1">
+                        <span class="icon icon__search--white"></span>
+                        Search
+                    </button>
+                    <form action="//www-cms-uat.deakin.edu.au/search" method="get" novalidate="novalidate">
+                        <div id="search-bar" role="search">
+                            <label for="search-bar__input" id="search-bar__input-label">Search Deakin for</label>
+                            <div id="search-bar__input-wrapper">
+                                <input id="search-bar__input" aria-labelledby="search-bar__input-label" type="text" aria-label="site search" placeholder="Search Deakin for..." name="q" value="">
+                            </div>
+                            <div id="search-bar__filter">
+                                <label for="search-bar__filter-select" id="search-bar__filter-select-label">Filter Search</label>
+                                <select id="search-bar__filter-select" aria-labelledby="search-bar__filter-select-label" aria-label="filter search" style="width: 100%" name="dknpagetype" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true">
+                                    <option value="All">&nbsp;</option>
+                                    <option value="Course">Courses</option>
+                                    <option value="News,events">News and events</option>
+                                    <option value="People">People</option>
+                                    <option value="All">Everything</option>
+                                </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="listbox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-search-bar__filter-select-container"><span class="select2-selection__rendered" role="option" id="select2-search-bar__filter-select-container"><span class="select2-selection__placeholder">Filter by:</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                            </div>
+                            <button id="search-bar__button--submit" aria-label="Search">
+                                <span class="icon icon__search--white"></span>
+                                Search
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <button type="button" role="button" aria-label="Toggle Navigation" id="navigation__toggle" tabindex="0">
+            <span class="hamburger">
+            <span class="patties"></span>
+            </span>
+            Menu
+        </button>
+    </div>
+</header>
 
-    <main class="main" role="main">
+    <div id="main-content__wrapper">
+        <div id="breadcrumbs" class="breadcrumbs noindex">
+            <div class="grid">
+                <nav>
+                    <ol aria-label="breadcrumb" class="cell cell--8-col cell--offset-1-col cell--offset-2-col-x-large cell--offset-0-col-x-small">
+                        <li class="breadcrumbs__list-item">
+                            <a href="//www-cms-uat.deakin.edu.au" class="breadcrumbs__link">
+                  Home
+                </a>
+                        </li>
+                        <li class="breadcrumbs__list-item">
+                            <a href="//www-cms-uat.deakin.edu.au/register-your-interest" class="breadcrumbs__link">Register your interest</a>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
 
-    </main>
+        <div tabindex="-1" id="main-content">
+          <!-- Adds the banner module partial -->
+          <div class="module__banner module__banner--feature-image module__banner--circle module__banner--course module__banner--dark">
+  <div class="grid">
+      <div class="cell cell--offset-1-col cell--offset-2-col-x-large cell--offset-0-col-small cell--6-col">
+          <div class="breadcrumbs__node"><div id="breadcrumbs" class="breadcrumbs noindex">
+      <div>
+        <nav>
+        <ol aria-label="breadcrumb" class="cell cell--8-col cell--offset-1-col cell--offset-2-col-x-large cell--offset-0-col-x-small">
+          
+          
+          
+          
+          <li class="breadcrumbs__list-item">
+            <a href="//www.deakin.edu.au" class="breadcrumbs__link">
+                Home
+              </a>
+          </li>
+          
+                        <li class="breadcrumbs__list-item">
+              <a href="//www.deakin.edu.au/course" class="breadcrumbs__link">
+                Course                </a>
+            </li>
+                        <li class="breadcrumbs__list-item">
+              <a href="//www.deakin.edu.au/course/bachelor-design-architecture" class="breadcrumbs__link">
+                Bachelor of Design (Architecture)                </a>
+            </li>
+                    </ol>
+        </nav>
+      </div>
+    </div></div>            
+          <div class="module__banner-content--wrapper">
+              <div class="module__banner-content">
+                  <div class="module__banner-title">
+                      <h1>Bachelor of Design (Architecture)</h1>
+                      <strong>Undergraduate degree</strong>
+                  </div>
+                  <div class="module__banner-description">  
+                      <p>Immerse yourself in our architecture degree to explore innovative real-world projects and learn about architectural ideas, building science and design.</p>
+                    <div class="module__banner-description-share-course">
+                        <p><strong>Domestic student information</strong></p>
+                        <a href="http://www.deakin.edu.au/course/bachelor-design-architecture-international">Switch to international student information</a>
 
-    <aside class="sidebar" role="complementary">
+                      <div class="related-item--share">
+                        <ul class="share__tooltip">
+                          <li class="social-link social-link__facebook">
+                            <a class="social-link__link addthis_button_facebook" addthis:url="http://www.deakin.edu.au/course/bachelor-design-architecture" addthis:title="Bachelor of Design (Architecture)" href="#" tabindex="0" title="Facebook"><i></i>Facebook</a>
+                          </li> 
+                          <li class="social-link social-link__twitter">
+                            <a class="social-link__link addthis_button_twitter" addthis:url="http://www.deakin.edu.au/course/bachelor-design-architecture" addthis:title="Bachelor of Design (Architecture)" href="#" tabindex="0" title="Twitter"><i></i>Twitter</a>
+                          </li>   
+                          <li class="social-link social-link__linkedin">
+                            <a class="social-link__link addthis_button_linkedin" addthis:url="http://www.deakin.edu.au/course/bachelor-design-architecture" addthis:title="Bachelor of Design (Architecture)" href="#" tabindex="0" target="_blank" title="LinkedIn"><i></i>Linkedin</a>
+                          </li>
+                        </ul>
+                        <a href="#" title="Share Button" aria-label="Share Button" class="" tabindex="0"><span class="icon__share--white"></span></a>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="module__banner-feature">
+      <div class="module__banner-image--wrapper">
+          <div class="module__banner-image" style="background-image: url(http://www.deakin.edu.au/__data/assets/image/0003/549174/6748_Bachelor-DesignArchitecture-Hero.jpg);">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="394px" height="2000px" viewBox="0 0 394 2000" style="enable-background:new 0 0 394 2000;" xml:space="preserve" preserveAspectRatio="xMinYMid">
+                  <path d="M11.5,1008.3c0,378.8,138.6,725.2,367.7,991.7H0V0h394C156.1,268.4,11.5,621.7,11.5,1008.3z"></path>
+              </svg>
+          </div>
+      </div>
+  </div>
+</div>
 
-    </aside>
+          <!-- Adds the navigation partial -->
+          <div id="navigation__course" class="navigation__course navigation__course--stacked navigation__course--save-course">
+  <div class="navigation__course--wrapper">
+    <div class="navigation__course--inner-wrapper">
+      <div class="navigation__course--view left-fade">
+        <div class="navigation__course--body-outer">
+          <div class="related-item--favourite"><div class="saved__tooltip"><p>You have successfully saved this course. <a href="/my-courses">Visit your saved courses</a></p></div>
+            <a href="#" title="Save Button" aria-label="Save Button" class="navigation__course--save-button" data-save-id="449795">
+              <span>
+                Save course
+                <span class="icon__heart"></span>
+              </span>
+            </a>
+          </div>
+          <div class="navigation__course--body">
+            <ul class="navigation__course--items">
+            <li class="navigation__course--item navigation__course--item-active"><a href="#" tabindex="-1" class="Sticky_anchorlink_Key_facts"><span>Key facts</span></a></li><li class="navigation__course--item"><a href="#" tabindex="-1" class="Sticky_anchorlink_Course_information"><span>Course information</span></a></li><li class="navigation__course--item"><a href="#" tabindex="-1" class="Sticky_anchorlink_Entry_requirements"><span>Entry requirements</span></a></li><li class="navigation__course--item"><a href="#" tabindex="-1" class="Sticky_anchorlink_Fees_and scholarships"><span>Fees and scholarships</span></a></li><li class="navigation__course--item"><a href="#" tabindex="-1" class="Sticky_anchorlink_Apply_now"><span>Apply now</span></a></li><li class="navigation__course--item"><a href="#" tabindex="-1" class="Sticky_anchorlink_Why_choose Deakin"><span>Why choose Deakin</span></a></li></ul>
+            <a href="#" class="navigation__course--button navigation__course--button-prev" style="display: none;"><span class="icon icon__arrow--prev--white"></span>prev</a>
+            <a href="#" class="navigation__course--button navigation__course--button-next" style="display: none;"><span class="icon icon__arrow--next--white"></span>next</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <footer class="footer" role="contentinfo">
+    <div class="navigation__course--apply-button"><a href="#"><span class="icon icon__page"></span>Apply <span class="sticky-hide">Now</span></a></div>
+  </div>
+</div>
 
-    </footer>
+          <!-- Adds the navigation partial -->
+          <aside class="navigation__utility">
+  <ul class="navigation__utility--items">
+    <li class="navigation__utility--item">
+      <a href="#" class="navigation__utility--link navigation__utility-link_Call_now">
+        <span class="navigation__utility--link__content--wrapper"><span class="navigation__utility--link__content"><span class="navigation__utility--link__content--inner"><span class="icon__wrapper"><span class="icon icon__telephone"></span></span><span class="sticky-hide  hide_call-now">Call now</span><span class="show_call-now">1800 693 888</span></span></span></span>
+      </a>
+    </li>
+    <li class="navigation__utility--item">
+      <a href="http://discover.deakin.edu.au/Register-Interest.html?_ga=2.56013416.257432724.1544397717-2127778120.1543369312" class="navigation__utility--link navigation__utility-link_Get_more_info">
+        <span class="navigation__utility--link__content--wrapper"><span class="navigation__utility--link__content"><span class="navigation__utility--link__content--inner"><span class="icon__wrapper"><span class="icon icon__pen navigation__utility-link_Get_more_info"></span></span><span class="sticky-hide">Get more info</span></span></span></span>
+      </a>
+    </li>
+    <li class="navigation__utility--item navigation__utility--item-sticky">
+      <a href="http://www.deakin.edu.au/application-portal" class="navigation__utility--link navigation__utility-link_Apply_now" target="_blank">
+        <span class="navigation__utility--link__content--wrapper"><span class="navigation__utility--link__content"><span class="navigation__utility--link__content--inner"><span class="icon__wrapper"><span class="icon icon__page navigation__utility-link_Apply_now"></span></span><span class="sticky-hide">Apply now</span></span></span></span>
+      </a>
+    </li>
+  </ul>
+</aside>
 
-    <script src="assets/components/jquery/jquery.min.js"></script>
-    <script src="assets/js/scripts.min.js"></script>
+          <!-- Adds the keyfacts partial -->
+          <div class="module__keyfacts course--keyfacts" data-section="key facts">
+              <div class="module__content-panel--wrapper module__content-panel--wrapper--content-spacing"> 
+                <div class="module__content-panel--title--full-width">
+                  <h2 class="course__section-heading">Key facts</h2>
+                </div>
+                <div class="module__content-panel--text--full-width">
+                  <div class="module__summary--items">
+                        <div class="module__summary--item">
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-        ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
+                          <div class="module__summary--icon-wrapper">
+                            <h3 class="course__subheading">ATAR</h3>
+                          </div>
 
+                          <div class="module__summary--content">
+                            <div class="module__atar-table"><div class="module__atar-table--row"><div>Waterfront:</div><div>70.05</div></div></div>
+                            <a class="term_has_def" onkeypress="return false" onclick="return false" href="#" title="Previously called 'clearly-in', this is now known as the lowest selection rank to which offers were made this year, including relevant adjustment factors.">Lowest selection rank</a>
+                          </div>
+
+                        </div>
+                      <div class="module__summary--item module__summary--item-bullets">
+
+                        <div class="module__summary--icon-wrapper">
+                          <h3 class="course__subheading">Duration</h3>
+                        </div>
+
+                        <div class="module__summary--content">
+                          3 years full-time or part-time equivalent
+                        </div>
+                      </div>
+                      <div class="module__summary--item">
+
+                        <div class="module__summary--icon-wrapper">
+                          <h3 class="course__subheading">Campuses </h3>
+                        </div>
+
+                        <div class="module__summary--content">
+                           <ul><li><a href="http://www.deakin.edu.au/campus-life/geelong-waterfront-campus">Waterfront (Geelong)</a></li></ul>
+
+                        </div>
+
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="module__content-panel">
+                <div class="module__content-panel--wrapper">
+                  <div class="module__content-panel--title">
+                    <h3 class="course__subheading">Key dates</h3>
+                  </div>
+
+                  <div class="module__content-panel--text">
+                    <p>Direct applications to Deakin for Trimester 1  2019 close 17 February 2019<br>VTAC entries are closed.</p>
+                  </div>
+                </div>
+              </div>
+                <div class="module__content-panel">
+                  <div class="module__content-panel--wrapper">
+                    <div class="module__content-panel--title">
+                      <h3 class="course__subheading">Current Deakin Students</h3>
+                    </div>
+                    <div class="module__content-panel--text">
+              <div id="content_container_1373626">
+              <p>To access your official course details for the year you started your degree, please visit the&nbsp;<a href="https://www.deakin.edu.au/students/enrolment-fees-and-money/university-handbook" target="_blank">handbook</a></p>
+              </div>
+              </div>
+                  </div>
+                </div>
+            </div>
+
+          <!-- Adds the modal partial -->
+          <div id="content_container_1738577">
+
+  <div class="overlay">
+    <div id="modal" aria-hidden="true" aria-labelledby="modalTitle" aria-describedby="modalDescription" role="dialog">
+      <div role="document">
+        
+        <!-- Adds the modal title partial -->
+        <div class="modal__title">
+  <div id="modalDescription" class="screen-reader-offscreen">Beginning of dialog window. It begins with a heading 1 called &quot;Registration Form&quot;. Escape will cancel and close the window.</div>
+  <h1 id="modalTitle"><i class="icon icon-Subscribe"></i>Subscribe</h1>
+  <button id="modalCloseButton" class="modalCloseButton" title="Close registration form">X</button>
+</div><!-- /.modal__title -->
+
+
+        <!-- Adds the modal info partial -->
+        <div class="modal__info">
+	<div class="modal__info--top">
+	  <p><i class="icon icon-CalendarClock"></i>Stay in the loop on key dates</p>
+	  <p><i class="icon icon-Ribbon"></i>Be the first to know about application details</p>
+	  <p><i class="icon icon-Information"></i>Keep up to date on Deakin news</p>
+	</div>
+</div>      
+
+        <div class="modal__body">
+
+          <form name="registerInterest" action="#" method="get" id="registerInterest">
+          
+            <!-- Adds the undergrad section one partial -->
+            <div class="undergrad-section-one">
+  <div class="modal__info--bottom">
+    <h3>We'll ensure you're notified of all news, dates and important notices regarding [Course Name] courses.</h3>
+  </div>
+  <fieldset class="section-contactDetails">
+    <div class="flexContainer">
+      <legend>Fill your contact details</legend>
+    </div>
+    <div class="flexContainer">
+
+      <div class="inputContainer inputContainer--half required">
+         <input type="text" name="firstName" id="firstName" >
+         <label for="firstName">First Name:</label>
+      </div>
+      <div class="inputContainer inputContainer--half">
+         <input type="text" name="lastName" id="lastName">
+         <label for="lastName">Last Name:</label>
+      </div>
+    </div>
+    <div class="flexContainer">
+      <div class="inputContainer inputContainer--half">      
+         <input type="email" name="email" id="email">
+         <label for="email">Email:</label>
+      </div>
+      <div class="inputContainer inputContainer--half">
+         <input type="tel" name="mobile" id="mobile">
+         <label for="mobile">Mobile Phone:</label>
+      </div>
+    </fieldset><!-- /.section-contactDetails -->
+
+    <fieldset class="flexContainer section-describesYou">
+      <legend>What best describes you?</legend>
+      
+      <div class="flexContainer flexContainer--wrap">
+        <label class="radioButton" for="secondary-student">
+          <div class="gap-2-bottom">
+          <input type="radio" name="describesYou" value="secondary-student" id="secondary-student">
+          <span class="">Secondary school student</span></div>
+            <div class="flexContainer flexContainer--wrap">
+              <div class="sub-radio">
+                <label class="radioButton">
+                  <input type="radio" name="secondary-school" value="early" id="early" >
+                  <span>Earlier</span>
+                </label>
+              </div>
+
+              <div class="sub-radio">
+                <label class="radioButton">
+                  <input type="radio" name="secondary-school" value="" id="" >
+                  <span>Year 7</span>
+                </label>
+              </div>
+
+              <div class="sub-radio">
+                <label class="radioButton">
+                  <input type="radio" name="secondary-school" value="" id="" >
+                  <span>Year 8</span>
+                </label>
+              </div>
+
+              <div class="sub-radio">
+                <label class="radioButton">
+                  <input type="radio" name="secondary-school" value="" id="" >
+                  <span>Year 9</span>
+                </label>
+              </div>
+
+              <div class="sub-radio">
+                <label class="radioButton">
+                  <input type="radio" name="secondary-school" value="" id="" >
+                  <span>Year 10</span>
+                </label>
+              </div>  
+
+              <div class="sub-radio">
+                <label class="radioButton">
+                  <input type="radio" name="secondary-school" value="" id="" >
+                  <span>Year 11</span>
+                </label>
+              </div>  
+
+              <div class="sub-radio">
+                <label class="radioButton">
+                  <input type="radio" name="secondary-school" value="" id="" >
+                  <span>Year 12</span>
+                </label>
+              </div>  
+            </div><!-- /.flexContainer -->
+        </label>
+
+        <label class="radioButton" for="parent-of-student">
+          <input type="radio" name="describesYou" value="parent-of-student" id="parent-of-student">
+          <span class="">Parent of student</span>
+        </label>
+
+        <label class="radioButton" for="careers-practitioner">
+          <input type="radio" name="describesYou" value="careers-practitioner" id="careers-practitioner">
+          <span class="">Careers practitioner</span>
+        </label>
+
+        <label class="radioButton" for="currently-in-workforce">
+          <input type="radio" name="describesYou" value="currently-in-workforce" id="currently-in-workforce">
+          <span class="">Currently in the workforce</span>
+        </label>
+
+        <label class="radioButton" for="studying-tafe-rto">
+          <input type="radio" name="describesYou" value="studying-tafe-rto" id="studying-tafe-rto">
+          <span class="">Studying at a TAFE or RTO</span>
+        </label>
+
+        <label class="radioButton" for="studying-at-another-uni">
+          <input type="radio" name="describesYou" value="studying-at-another-uni" id="studying-at-another-uni">
+          <span class="">Studying at another university</span>
+        </label>
+
+        <label class="radioButton" for="current-deakin-student">
+          <input type="radio" name="describesYou" value="current-deakin-student" id="current-deakin-student">
+          <span class="">Current Deakin student</span>
+        </label>
+      </div>
+    </fieldset><!-- /.section-describesYou -->
+
+    <div class="flexContainer">
+      <div class="inputContainer inputContainer--checkbox inputContainer--right">
+      
+      <div class="styled__checkbox">
+        <input class="styled" id="business" name="opinion" type="checkbox" value="ia-Business" style="position: absolute; opacity: 0;" aria-invalid="false">
+        <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+      </div>
+       <label for="opinion">I'm interested in sharing my opinion to help Deakin improve student experience</label>
+      </div>
+    </div>
+
+    <div class="flexContainer">
+      <div class="inputContainer inputContainer--right">
+        <button type="submit" name="subscribe" class="button button--subscribe button--primary">Subscribe</button>
+      </div>
+    </div>
+
+    <small class="align--right agree--small">By clicking subscribe, I agree to Deakin University's <a href="#">Privacy Policy</a></small>
+<!-- </div> -->
+</div><!-- /.undergrad-section-one -->
+
+            <!-- Adds the undergrad section two partial -->
+            <div class="undergrad-section-two">
+
+  <div class="flexContainer flexContainer--row thankYou">
+    <i class="icon icon-Tick icon-circle--border"></i>
+    <div class="flexContainer flexContainer--column">
+      <h3>Welcome to the Deakin family, [name].</h3>
+      <p>Thank you for subsctibing. We'll keep you up to date with everything you need to know. To help us give you the best updates possible, tell us a little more about yourself.</p>
+    </div>
+  </div>
+
+  <fieldset class="flexContainer section-startDate"> 
+    <legend class="required">Select the date you are planning to start studying:</legend>
+    <div class="flexContainer flexContainer--wrap">
+      <label class="radioButton" for="date-one">
+        <input type="radio" name="startDate" value="march-2019" id="date-one">
+        <span class="">March 2019</span> 
+      </label>
+
+      <label class="radioButton" for="date-two">
+        <input type="radio" name="startDate" value="july-2019" id="date-two">
+        <span class="">July 2019</span> 
+      </label>
+
+      <label class="radioButton" for="date-three">
+        <input type="radio" name="startDate" value="november-2019" id="date-three">
+        <span class="">November 2019</span> 
+      </label>
+    </div>
+  </fieldset><!-- /.section-startDate -->
+
+  <fieldset class="flexContainer section-wantToKnow">
+    <legend class="required">Tell us more about what you want to know about:</legend>
+    <div class="flexContainer flexContainer--wrap">
+      <label class="radioButton" for="pathways">
+        <input type="checkbox" name="wantToKnow" value="pathways" id="pathways">
+        <span class="">Pathways</span> 
+      </label>
+
+      <label class="radioButton" for="studying-online">
+        <input type="checkbox" name="wantToKnow" value="studying-online" id="studying-online">
+        <span class="">Studying online</span> 
+      </label>
+
+      <label class="radioButton" for="scholarships">
+        <input type="checkbox" name="wantToKnow" value="scholarships" id="scholarships">
+        <span class="">Scholarships</span> 
+      </label>
+
+      <label class="radioButton" for="keydates">
+        <input type="checkbox" name="wantToKnow" value="keydates" id="keydates">
+        <span class="">Key dates</span> 
+      </label>
+
+      <label class="radioButton" for="how-to-apply">
+        <input type="checkbox" name="wantToKnow" value="how-to-apply" id="how-to-apply">
+        <span class="">How to apply</span> 
+      </label>
+
+      <label class="radioButton" for="accommodation">
+        <input type="checkbox" name="wantToKnow" value="accommodation" id="accommodation">
+        <span class="">Accommodation</span> 
+      </label>
+
+      <label class="radioButton" for="career-and-study-advice">
+        <input type="checkbox" name="wantToKnow" value="career-and-study-advice" id="career-and-study-advice">
+        <span class="">Career and study advice</span> 
+      </label>
+
+      <label class="radioButton" for="events">
+        <input type="checkbox" name="wantToKnow" value="events" id="events">
+        <span class="">Events</span> 
+      </label>
+
+      <label class="radioButton" for="fees">
+        <input type="checkbox" name="wantToKnow" value="fees" id="fees">
+        <span class="">Fees</span> 
+      </label>
+    </div>
+  </fieldset><!-- /.section-wantToKnow -->
+
+  <div class="flexContainer">
+    <div class="inputContainer inputContainer--right">
+      <button type="submit" name="update" class="button button--update button--primary" disabled>Update my details</button>
+    </div>
+  </div>
+
+</div><!-- /.undergrad-section-one -->
+            
+
+        </form>
+        <form id="mktoForm_3171" style="display:none"></form>
+      </div><!-- /.modal__body -->
+   </div><!-- Role Document -->
+   
+  </div><!-- /#modal -->
+</div><!-- /.overlay -->
+</div><!-- /#content_container_1738577 -->
+        </div><!-- /#main-content -->
+
+    </div>
+
+    <div id="modalOverlay" tabindex="-1"></div>
+
+
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    
+    <script src="assets/js/modal-window.js"></script>
+    <script src="//app-sn01.marketo.com/js/forms2/js/forms2.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
   </body>
 </html>
