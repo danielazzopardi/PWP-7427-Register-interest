@@ -1,0 +1,31 @@
+<div id="content_container_1738577">
+
+  <div class="overlay">
+    <div id="modal" aria-hidden="true" aria-labelledby="modalTitle" aria-describedby="modalDescription" role="dialog">
+      <div role="document">
+        
+        <!-- Adds the modal title partial -->
+        {% include "./modal-partials/modal-title.njk" %}
+
+        <!-- Adds the modal info partial -->
+        {% include "./modal-partials/modal-info.njk" %}      
+
+        <div class="modal__body">
+
+          <form name="registerInterest" action="#" method="get" id="registerInterest">
+          
+            <!-- Adds the undergrad section one partial -->
+            {% include "./../courses-partials/undergrad-section-one.njk" %}
+
+            <!-- Adds the undergrad section two partial -->
+            {% include "./../courses-partials/undergrad-section-two.njk" %}
+            
+
+        </form>
+        <form id="mktoForm_3171" style="display:none"></form>
+      </div><!-- /.modal__body -->
+   </div><!-- Role Document -->
+   
+  </div><!-- /#modal -->
+</div><!-- /.overlay -->
+</div><!-- /#content_container_1738577 -->

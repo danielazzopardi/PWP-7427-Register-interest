@@ -373,7 +373,7 @@
     </div>
     <div class="flexContainer">
       <div class="inputContainer inputContainer--half">      
-         <input type="email" name="email" id="email">
+         <input type="text" name="email" id="email">
          <label for="email">Email:</label>
       </div>
       <div class="inputContainer inputContainer--half">
@@ -386,57 +386,58 @@
       <legend>What best describes you?</legend>
       
       <div class="flexContainer flexContainer--wrap">
-        <label class="radioButton" for="secondary-student">
-          <div class="gap-2-bottom">
-          <input type="radio" name="describesYou" value="secondary-student" id="secondary-student">
-          <span class="">Secondary school student</span></div>
-            <div class="flexContainer flexContainer--wrap">
+        <label class="radioButton flatBottom fakeDropdown" for="secondary-student">
+          <div>
+            <input type="radio" name="describesYou" value="secondary-student" id="secondary-student">
+            <span class="secondary-school-student">Secondary school student:</span>
+          </div>
+            <div class="flexContainer flexContainer--wrap flexContainer--child">
               <div class="sub-radio">
                 <label class="radioButton">
-                  <input type="radio" name="secondary-school" value="early" id="early" >
-                  <span>Earlier</span>
+                  <input type="radio" name="secondary-school" value="Year 12" id="y12" >
+                  <span>Year 12</span>
                 </label>
               </div>
 
               <div class="sub-radio">
                 <label class="radioButton">
-                  <input type="radio" name="secondary-school" value="" id="" >
-                  <span>Year 7</span>
+                  <input type="radio" name="secondary-school" value="Year 11" id="y11" >
+                  <span>Year 11</span>
                 </label>
               </div>
 
               <div class="sub-radio">
                 <label class="radioButton">
-                  <input type="radio" name="secondary-school" value="" id="" >
-                  <span>Year 8</span>
+                  <input type="radio" name="secondary-school" value="Year 10" id="y10" >
+                  <span>Year 10</span>
                 </label>
               </div>
 
               <div class="sub-radio">
                 <label class="radioButton">
-                  <input type="radio" name="secondary-school" value="" id="" >
+                  <input type="radio" name="secondary-school" value="Year 9" id="y9" >
                   <span>Year 9</span>
                 </label>
               </div>
 
               <div class="sub-radio">
                 <label class="radioButton">
-                  <input type="radio" name="secondary-school" value="" id="" >
-                  <span>Year 10</span>
+                  <input type="radio" name="secondary-school" value="Year 8" id="y8" >
+                  <span>Year 8</span>
                 </label>
               </div>  
 
               <div class="sub-radio">
                 <label class="radioButton">
-                  <input type="radio" name="secondary-school" value="" id="" >
-                  <span>Year 11</span>
+                  <input type="radio" name="secondary-school" value="Year 7" id="y7" >
+                  <span>Year 7</span>
                 </label>
               </div>  
 
               <div class="sub-radio">
                 <label class="radioButton">
-                  <input type="radio" name="secondary-school" value="" id="" >
-                  <span>Year 12</span>
+                  <input type="radio" name="secondary-school" value="Earlier" id="early" >
+                  <span>Earlier</span>
                 </label>
               </div>  
             </div><!-- /.flexContainer -->
@@ -476,13 +477,10 @@
 
     <div class="flexContainer">
       <div class="inputContainer inputContainer--checkbox inputContainer--right">
-      
-      <div class="styled__checkbox">
-        <input class="styled" id="business" name="opinion" type="checkbox" value="ia-Business" style="position: absolute; opacity: 0;" aria-invalid="false">
-        <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+        <input type="checkbox" name="opinion">
+        <label for="opinion">I'm interested in sharing my opinion to help Deakin improve student experience</label>
       </div>
-       <label for="opinion">I'm interested in sharing my opinion to help Deakin improve student experience</label>
-      </div>
+  
     </div>
 
     <div class="flexContainer">

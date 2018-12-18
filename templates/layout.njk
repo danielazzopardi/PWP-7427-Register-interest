@@ -1,0 +1,86 @@
+<!-- layout.nunjucks -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Register Interest</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link href="//www.google-analytics.com" rel="dns-prefetch">
+    <link href="//ajax.googleapis.com" rel="dns-prefetch">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="https://www-cms-uat.deakin.edu.au/designs/cs/normalize.css" media="all">
+    <link rel="stylesheet" href="https://www-cms-uat.deakin.edu.au/designs/cs/perfoormance-css/base.css" media="screen">
+    <link rel="stylesheet" href="https://www-cms-uat.deakin.edu.au/designs/cs/perfoormance-css/components.css" media="screen">
+    <link rel="stylesheet" href="https://www-cms-uat.deakin.edu.au/designs/cs/perfoormance-css/fonts.css" media="screen">
+    <link rel="stylesheet" href="https://www-cms-uat.deakin.edu.au/designs/cs/perfoormance-css/modules.css" media="screen">
+    <link rel="stylesheet" href="https://www-cms-uat.deakin.edu.au/designs/cs/perfoormance-css/utilities.css" media="screen">
+    <link rel="stylesheet" href="https://www-cms-uat.deakin.edu.au/designs/cs/lightgallery.css" media="screen">
+    <link rel="stylesheet" href="https://www-cms-uat.deakin.edu.au/__data/assets/css_file/0004/556366/printcss.css" media="print">
+    <link rel="shortcut icon" href="//www-cms-uat.deakin.edu.au/designs/public/favicon.ico" type="image/x-icon">
+
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <script src="assets/components/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+    <!-- You write code for this content block in another file -->
+    {% block content %}
+
+    <!-- Adds the navigation partial -->
+    {% include "./partials/header.njk" %}
+
+    <div id="main-content__wrapper">
+        <div id="breadcrumbs" class="breadcrumbs noindex">
+            <div class="grid">
+                <nav>
+                    <ol aria-label="breadcrumb" class="cell cell--8-col cell--offset-1-col cell--offset-2-col-x-large cell--offset-0-col-x-small">
+                        <li class="breadcrumbs__list-item">
+                            <a href="//www-cms-uat.deakin.edu.au" class="breadcrumbs__link">
+                  Home
+                </a>
+                        </li>
+                        <li class="breadcrumbs__list-item">
+                            <a href="//www-cms-uat.deakin.edu.au/register-your-interest" class="breadcrumbs__link">Register your interest</a>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <div tabindex="-1" id="main-content">
+          <!-- Adds the banner module partial -->
+          {% include "./partials/banner-module.njk" %}
+
+          <!-- Adds the navigation partial -->
+          {% include "./partials/navigation.njk" %}
+
+          <!-- Adds the navigation partial -->
+          {% include "./partials/nav-util.njk" %}
+
+          <!-- Adds the keyfacts partial -->
+          {% include "./partials/keyfacts.njk" %}
+
+          <!-- Adds the modal partial -->
+          {% include "./partials/modal.njk" %}
+        </div><!-- /#main-content -->
+
+    </div>
+
+    <div id="modalOverlay" tabindex="-1"></div>
+
+
+
+    {% endblock %}
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    
+    <script src="assets/js/modal-window.js"></script>
+    <script src="//app-sn01.marketo.com/js/forms2/js/forms2.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+  </body>
+</html>

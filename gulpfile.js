@@ -31,8 +31,6 @@ gulp.task('css', function () {
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer('last 4 version'))
     .pipe(gulp.dest('app/assets/css'))
-    // .pipe(cssnano({minifyFontValues: false, zindex: false}))
-    // .pipe(rename({ suffix: '.min' }))
     .pipe(header(banner, { package : package }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('app/assets/css'))
@@ -67,6 +65,7 @@ gulp.task('vendorjs', function(){
 
 gulp.task('browser-sync', function() {
     browserSync.init(null, {
+        injectChanges: true,
         server: {
             baseDir: "app"
         }

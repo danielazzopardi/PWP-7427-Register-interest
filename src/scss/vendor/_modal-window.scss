@@ -1,0 +1,471 @@
+@font-face {
+  font-family: 'WorldlyLight';
+  src: url('/assets/fonts/WorldlyLight.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.woff') format('woff');
+}
+
+#modalOverlay {
+	width:100%;
+	height:100%;
+	z-index:50; /* places the modal overlay between the main page and the modal dialog*/
+	background-color:#000;
+	opacity:0.5;
+	position:fixed;
+	top:0;
+	left:0;
+	display:none;
+	margin:0;
+	padding:0;
+}
+
+#modal {
+	background-color: $lightest-grey;
+	left:25%;
+	margin-bottom: $gap-triple;
+	margin-left:auto;
+	margin-right:auto;
+	max-width: 843px;
+	padding: 0px;
+	position:absolute;
+	top: $gap-triple;
+	width:50%;
+	z-index: 700; 
+} 
+
+.overlay {
+	background-color: rgba(0,0,0,0.75);
+	bottom: 0;
+	display: block;
+	height: 100%;
+	left: 0;
+	overflow-y: auto;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 700;
+}
+
+.modalCloseButton {
+	float:right;
+	position:absolute;
+	top:$gap;
+	left:92%;
+	height:25px;
+
+	img {
+		border:0;
+	}
+}
+
+.screen-reader-offscreen {
+	height:1px;
+	left:-999px;
+	position:absolute;
+	top:auto;
+	width:1px;
+}
+
+.modal {
+
+	&__title {
+		background: $dark-grey;
+		color: $white;
+		padding: 18px 30px;
+		
+		
+		h1 {
+			font-family: 'WorldlyLight',Open Sans,Arial,sans-serif;
+			font-size: 22px;
+			line-height: 41px;
+		    display: flex;
+		    flex: 0 0 100%;
+		    justify-content: flex-start;
+		    margin: 0;
+
+		    .icon {
+		    	font-size: 40px;
+		    	margin-right: 13px;
+		    	top: -3px;
+    			position: relative;
+		    }
+		}
+	}
+
+	&__info {
+		background-color: $lightest-grey;
+
+		&--top {
+			background-color: $light-grey;
+			display: flex;
+			flex-direction: row;
+			flex: 0 1 100%;
+			padding: 12px 0;
+
+			p {
+				align-items: flex-start;
+				display: flex;
+				flex: 1 1 33%;
+				line-height: 1.3em;
+				margin: 0;
+				padding: 0 20px;
+
+				&:first-child {
+					padding-left: 30px;
+				}
+
+				&:last-child {
+					padding-right: 30px;
+				}
+			}
+
+			.icon {
+				height: 38px;
+				width: 34px;
+			    align-items: center;
+			    display: flex;
+			    flex: 0 0 auto;
+			    justify-content: center;
+			    margin-right: 7px;
+
+				&:before {
+					font-size: 28px;
+				}
+			}
+		}
+
+		&--bottom {
+		    border-bottom: 1px solid #fff;
+		    margin-bottom: 30px;
+		    background: $lightest-grey;
+		}
+		
+	}
+
+	&__body {
+		background: $lightest-grey;
+		padding: 25px 30px;
+	}
+}
+
+#registerInterest {
+
+	.undergrad-section {
+		&-one {
+			// display: none;
+		}
+
+		&-two {
+			display: block;
+
+			.thankYou {
+				border-bottom: 1px solid $light-grey;
+				margin-bottom: 25px;
+			}
+
+			.section {
+				&-wantToKnow {
+					border-bottom: 1px solid $light-grey;
+					padding-bottom: 40px;
+					margin-bottom: $gap-triple;
+				}
+			}
+		}
+	}
+	.flexContainer {
+	    display: flex;
+	    flex: 1 1 100%;
+
+	    &--wrap {
+	    	flex-wrap: wrap;
+	    }
+
+	    &--row {
+	    	flex-direction: row;
+	    }
+
+	    &--column {
+	    	flex-direction: column;
+	    }
+
+	    .inputContainer {
+	    	position: relative;
+	    	margin-bottom: 12px;
+
+	    	label {
+				height: 20px;
+				font-size: 15px;
+				font-weight: normal;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: normal;
+				color: $dark-grey;
+				position: absolute;
+				top: 10px;
+				transition: 0.2s ease all
+			}
+
+			&--half {
+				width: 50%;
+
+				&:first-child {
+					margin-right: $gap;
+				}
+
+				&:last-child {
+					margin-left: $gap;
+				}
+			}
+
+			&--checkbox {
+				font-size: 15px;
+			    margin-top: 18px;
+			    margin-bottom: 30px;
+
+				label {
+					position: relative;
+					top: 2px;
+				}
+			}
+
+			&--right {
+				display: flex;
+			    flex: 1 1 100%;
+			    justify-content: flex-end;
+			}
+
+			&.filled {
+		    	input[type=date], 
+				input[type=email], 
+				input[type=number], 
+				input[type=tel], 
+				input[type=text] {
+					& + label {
+						top: 0px;
+			   			font-size: 9px;
+			    		transition: 0.4s ease all
+					}
+				}
+		    }
+	    }
+	}
+
+	input[type=date], 
+	input[type=email], 
+	input[type=number], 
+	input[type=tel], 
+	input[type=text] {
+		background: none;
+	    border: none;
+	    border-bottom: 1px solid #979797;
+
+	    &:focus {
+	    	& + label {
+	    		top: 0px;
+	   			font-size: 9px;
+	    		transition: 0.4s ease all;
+	    	}
+	    }
+	}
+
+	// Remove the autofill background color on input fields
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover, 
+	input:-webkit-autofill:focus, 
+	input:-webkit-autofill:active  {
+	    -webkit-box-shadow: 0 0 0 30px $lightest-grey inset;
+	}
+
+	fieldset {
+		padding: 0 0 20px;
+	}
+
+	legend {
+	    font-family: Open Sans,Arial,sans-serif;
+	    font-weight: 600;
+	    font-size: 15px;
+	    line-height: 15px;
+	    padding-bottom: 25px;
+	}
+
+	.radioButton {
+		background: $white;
+		border: 1px solid $dark-green;
+		border-radius: 22px;
+		color: $dark-green;
+		cursor: pointer;
+		line-height: 20px;
+		margin: 5px;
+		padding: 8px 10px;
+		position: relative;
+
+		input[type="checkbox"],
+		input[type="radio"] {
+			margin: 0 6px 0 0;
+		}
+
+		input[type="radio"]:checked:not(#secondary-student) + span {
+			&:before {
+				content: '';
+			    position: absolute;
+			    left: 8px;
+			    top: 11px;
+			    width: 14px;
+			    height: 14px;
+			    border: 1px solid #fff;
+			    border-radius: 50%;
+			    background: $dark-green;
+			    transition: 0.2s ease all;
+			}
+
+			&:after {
+				content: '';
+			    position: absolute;
+			    left: 12px;
+			    top: 15px;
+			    width: 8px;
+			    height: 8px;
+			    border-radius: 100%;
+			    background: $white;
+			    transition: 0.2s ease all;
+			}
+		}
+
+		.flexContainer--child {
+			display: none;
+
+			&.show {
+				display: flex;
+				position: absolute;
+			    background: #fff;
+			    border-radius: 0 0 22px 22px;
+			    border: 1px solid $dark-green;
+			    border-top: none;
+			    left: 0px;
+			    max-width: 318px;
+			    top: 40px;
+			    z-index: 1;
+			}
+		}
+
+		&.flatBottom.filled {
+			border-radius: 22px 22px 0 0;
+		}
+
+		&.optionSelected {
+			background: $dark-green;
+			color: $white;
+			transition: 0.2s ease all;
+		}
+	}
+
+	.sub-radio {
+		line-height: 2.5em;
+		margin-bottom: 0;
+
+		label.radioButton {
+			display: flex;
+			flex: 1;
+			width: 92px;
+		}
+	}
+
+	.button {
+
+		&--disabled {
+
+		}
+		&--subscribe {
+			color: #fff!important;
+	    	background-color: $dark-grey;
+		}
+	}
+
+	.align {
+		&--right {
+			display: block;
+			text-align: right;
+		}
+	}
+
+	.agree {
+		&--small {
+			margin-top: 7px;
+		}
+	}
+
+	.gap {
+		&-2 {
+			&-bottom {
+				margin-bottom: $gap-double;
+			}
+		}
+	}
+
+	.icon {
+		&-Tick.icon-circle--border {
+			border: 2px solid $dark-green;
+		    width: 100%;
+		    height: auto;
+		    max-width: 78px;
+		    max-height: 78px;
+		    border-radius: 50%;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    margin-right: 3%;
+
+		    &:before {
+		    	font-size: 40px;
+		    }
+		}
+	}
+
+	.thankYou {
+		h3 {
+			font-size: 18px;
+			margin: 0;
+
+			& + p {
+				margin-top: 5px;
+			}
+		}
+	}
+
+	.fakeDropdown {
+		width: 318px;
+
+		input {
+			position: absolute;
+    		left: -99999px;
+		}
+
+		.added-text {
+			margin-left: 10px;
+		}
+
+		.secondary-school-student {
+			&:after {
+				background-color: #0C8571;
+			    border-radius: 50%;
+			    content: ">";
+			    display: flex;
+			    height: 18px;
+			    width: 18px;
+			    left: auto;
+			    position: absolute;
+			    right: 0px;
+			    top: 2px;
+			    color: #fff;
+			    justify-content: center;
+			    transform: rotate(270deg);
+			}
+		}
+	}
+}
+
