@@ -1,140 +1,149 @@
-<div class="undergrad-section-one">
+<div class="form-section-one">
   <div class="modal__info--bottom">
-    <h3>We'll ensure you're notified of all news, dates and important notices regarding [Course Name] courses.</h3>
+    <h3>We'll ensure you're notified of all news, dates and important notices regarding <span class="course-name">[course]</span>.</h3>
   </div>
   <fieldset class="section-contactDetails">
     <div class="flexContainer">
       <legend>Fill your contact details</legend>
     </div>
     <div class="flexContainer">
-
       <div class="inputContainer inputContainer--half required">
-         <input type="text" name="firstName" id="firstName" >
-         <label for="firstName">First Name:</label>
+        <input type="text" name="fName" id="fName">
+        <label for="fName">First Name:</label>
       </div>
       <div class="inputContainer inputContainer--half">
-         <input type="text" name="lastName" id="lastName">
-         <label for="lastName">Last Name:</label>
+        <input type="text" name="lName" id="lName">
+        <label for="lName">Last Name:</label>
       </div>
     </div>
     <div class="flexContainer">
-      <div class="inputContainer inputContainer--half">      
-         <input type="text" name="email" id="email">
-         <label for="email">Email:</label>
+      <div class="inputContainer inputContainer--half required">
+        <input type="text" name="regEmail" id="regEmail">
+        <label for="regEmail">Email:</label>
       </div>
-      <div class="inputContainer inputContainer--half">
-         <input type="tel" name="mobile" id="mobile">
-         <label for="mobile">Mobile Phone:</label>
+      <div class="inputContainer inputContainer--half required">
+        <input type="tel" name="regMobile" id="regMobile">
+        <label for="regMobile">Mobile Phone:</label>
       </div>
-    </fieldset><!-- /.section-contactDetails -->
-
-    <fieldset class="flexContainer section-describesYou">
-      <legend>What best describes you?</legend>
-      
-      <div class="flexContainer flexContainer--wrap">
-        <label class="radioButton flatBottom fakeDropdown" for="secondary-student">
-          <div>
-            <input type="radio" name="describesYou" value="secondary-student" id="secondary-student">
-            <span class="secondary-school-student">Secondary school student:</span>
+  </fieldset><!-- /.section-contactDetails -->
+  <fieldset class="flexContainer section-describesYou required">
+    <legend>What best describes you?</legend>
+    <div class="flexContainer flexContainer--wrap flex--parent">
+      <label class="radioButton flatBottom fakeDropdown section-undergraduate" for="secondary-student">
+        <div>
+          <input type="radio" name="describesYou" value="School Leaver" id="secondary-student">
+          <span class="secondary-school-student">Secondary school student:
+            <svg class="icon icon-arrow icon-arrow__background">
+              <use href="#icon-arrow" xlink:href="#icon-arrow"/>
+            </svg>
+          </span>
+        </div>
+        <div class="flexContainer flexContainer--wrap flexContainer--child">
+          <div class="sub-radio">
+            <label class="radioButton">
+              <input type="radio" name="secondary-school" value="Year 12" id="y12">
+              <span>Year 12</span>
+            </label>
           </div>
-            <div class="flexContainer flexContainer--wrap flexContainer--child">
-              <div class="sub-radio">
-                <label class="radioButton">
-                  <input type="radio" name="secondary-school" value="Year 12" id="y12" >
-                  <span>Year 12</span>
-                </label>
-              </div>
-
-              <div class="sub-radio">
-                <label class="radioButton">
-                  <input type="radio" name="secondary-school" value="Year 11" id="y11" >
-                  <span>Year 11</span>
-                </label>
-              </div>
-
-              <div class="sub-radio">
-                <label class="radioButton">
-                  <input type="radio" name="secondary-school" value="Year 10" id="y10" >
-                  <span>Year 10</span>
-                </label>
-              </div>
-
-              <div class="sub-radio">
-                <label class="radioButton">
-                  <input type="radio" name="secondary-school" value="Year 9" id="y9" >
-                  <span>Year 9</span>
-                </label>
-              </div>
-
-              <div class="sub-radio">
-                <label class="radioButton">
-                  <input type="radio" name="secondary-school" value="Year 8" id="y8" >
-                  <span>Year 8</span>
-                </label>
-              </div>  
-
-              <div class="sub-radio">
-                <label class="radioButton">
-                  <input type="radio" name="secondary-school" value="Year 7" id="y7" >
-                  <span>Year 7</span>
-                </label>
-              </div>  
-
-              <div class="sub-radio">
-                <label class="radioButton">
-                  <input type="radio" name="secondary-school" value="Earlier" id="early" >
-                  <span>Earlier</span>
-                </label>
-              </div>  
-            </div><!-- /.flexContainer -->
-        </label>
-
-        <label class="radioButton" for="parent-of-student">
-          <input type="radio" name="describesYou" value="parent-of-student" id="parent-of-student">
-          <span class="">Parent of student</span>
-        </label>
-
-        <label class="radioButton" for="careers-practitioner">
-          <input type="radio" name="describesYou" value="careers-practitioner" id="careers-practitioner">
-          <span class="">Careers practitioner</span>
-        </label>
-
-        <label class="radioButton" for="currently-in-workforce">
-          <input type="radio" name="describesYou" value="currently-in-workforce" id="currently-in-workforce">
-          <span class="">Currently in the workforce</span>
-        </label>
-
-        <label class="radioButton" for="studying-tafe-rto">
-          <input type="radio" name="describesYou" value="studying-tafe-rto" id="studying-tafe-rto">
-          <span class="">Studying at a TAFE or RTO</span>
-        </label>
-
-        <label class="radioButton" for="studying-at-another-uni">
-          <input type="radio" name="describesYou" value="studying-at-another-uni" id="studying-at-another-uni">
-          <span class="">Studying at another university</span>
-        </label>
-
-        <label class="radioButton" for="current-deakin-student">
-          <input type="radio" name="describesYou" value="current-deakin-student" id="current-deakin-student">
-          <span class="">Current Deakin student</span>
-        </label>
-      </div>
-    </fieldset><!-- /.section-describesYou -->
-
-    <div class="flexContainer">
-      <div class="inputContainer inputContainer--checkbox inputContainer--right">
-        <input type="checkbox" name="opinion">
-        <label for="opinion">I'm interested in sharing my opinion to help Deakin improve student experience</label>
-      </div>
-  
+          <div class="sub-radio">
+            <label class="radioButton">
+              <input type="radio" name="secondary-school" value="Year 11" id="y11">
+              <span>Year 11</span>
+            </label>
+          </div>
+          <div class="sub-radio">
+            <label class="radioButton">
+              <input type="radio" name="secondary-school" value="Year 10" id="y10">
+              <span>Year 10</span>
+            </label>
+          </div>
+          <div class="sub-radio">
+            <label class="radioButton">
+              <input type="radio" name="secondary-school" value="Year 9" id="y9">
+              <span>Year 9</span>
+            </label>
+          </div>
+          <div class="sub-radio">
+            <label class="radioButton">
+              <input type="radio" name="secondary-school" value="Year 8" id="y8">
+              <span>Year 8</span>
+            </label>
+          </div>
+          <div class="sub-radio">
+            <label class="radioButton">
+              <input type="radio" name="secondary-school" value="Year 7" id="y7">
+              <span>Year 7</span>
+            </label>
+          </div>
+          <div class="sub-radio">
+            <label class="radioButton">
+              <input type="radio" name="secondary-school" value="Earlier" id="early">
+              <span>Earlier</span>
+            </label>
+          </div>
+        </div><!-- /.flexContainer -->
+      </label>
+      <label class="radioButton section-undergraduate" for="parent-of-student">
+        <input type="radio" name="describesYou" value="Parent" id="parent-of-student">
+        <span class="">Parent of student</span>
+      </label>
+      <label class="radioButton section-undergraduate" for="careers-practitioner">
+        <input type="radio" name="describesYou" value="Careers Practitioner" id="careers-practitioner">
+        <span class="">Careers practitioner</span>
+      </label>
+      <label class="radioButton" for="currently-in-workforce">
+        <input type="radio" name="describesYou" value="Employed" id="currently-in-workforce">
+        <span class="">Currently in the workforce</span>
+      </label>
+      <label class="radioButton" for="studying-tafe-rto">
+        <input type="radio" name="describesYou" value="TAFE STudent" id="studying-tafe-rto">
+        <span class="">Studying at a TAFE or RTO</span>
+      </label>
+      <label class="radioButton" for="studying-at-another-uni">
+        <input type="radio" name="describesYou" value="Switcher" id="studying-at-another-uni">
+        <span class="">Studying at another university</span>
+      </label>
+      <label class="radioButton" for="current-deakin-student">
+        <input type="radio" name="describesYou" value="University Student" id="current-deakin-student">
+        <span class="">Current Deakin student</span>
+      </label>
     </div>
+  </fieldset><!-- /.section-describesYou -->
 
-    <div class="flexContainer">
-      <div class="inputContainer inputContainer--right">
-        <button type="submit" name="subscribe" class="button button--subscribe button--primary">Subscribe</button>
-      </div>
+  <fieldset class="section-studyLevel section-generic required">
+    <legend>What qualification are you looking to study?</legend>
+    <div class="flexContainer flexContainer--wrap">
+      <label class="radioButton" for="undergraduate-studies">
+        <input type="radio" name="qualificationLevel" value="undergraduate" id="undergraduate-studies">
+        <span class="">Undergraduate studies</span>
+      </label>
+
+       <label class="radioButton" for="postgraduate-studies">
+        <input type="radio" name="qualificationLevel" value="postgraduate" id="postgraduate-studies">
+        <span class="">Postgraduate studies</span>
+      </label>
+
+       <label class="radioButton" for="higher-degree--studies">
+        <input type="radio" name="qualificationLevel" value="higher-degree-" id="higher-degree--studies">
+        <span class="">Higher degree studies</span>
+      </label>
     </div>
+  </fieldset><!-- /.section-studyLevel -->
 
-    <small class="align--right agree--small">By clicking subscribe, I agree to Deakin University's <a href="#">Privacy Policy</a></small>
-<!-- </div> -->
-</div><!-- /.undergrad-section-one -->
+  <div class="flexContainer">
+    <div class="inputContainer inputContainer--checkbox inputContainer--right">
+      <input type="checkbox" name="opinion-improve" id="opinion-improve">
+      <label for="opinion-improve">I'm interested in sharing my opinion to help Deakin improve student experience</label>
+    </div>
+  </div>
+  <div class="flexContainer">
+    <div class="inputContainer inputContainer--right">
+      <button type="button" name="nextForm" class="button button--subscribe button--primary js-next__form" disabled>
+      <!-- <button type="submit" name="update" class="button button--update button--primary">Update my details</button> -->
+        <span style="display:none" class="loadersmall"></span>
+        Subscribe
+      </button>
+    </div>
+  </div>
+  <small class="align--right agree--small">By clicking subscribe, I agree to Deakin University's <a href="#">Privacy Policy</a></small>
+</div><!-- /.section-one -->

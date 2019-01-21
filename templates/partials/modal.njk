@@ -1,9 +1,10 @@
-<div id="content_container_1738577">
-
-  <div class="overlay">
-    <div id="modal" aria-hidden="true" aria-labelledby="modalTitle" aria-describedby="modalDescription" role="dialog">
+<div class="overlay register-interest-overlay" aria-hidden="true" aria-labelledby="modalTitle" aria-describedby="modalDescription" role="dialog">
+    <div id="modal">
       <div role="document">
-        
+
+        <!-- Add svg icons to page for reference -->
+        <div class="hidden">{% include "./icons.njk" %}</div>
+
         <!-- Adds the modal title partial -->
         {% include "./modal-partials/modal-title.njk" %}
 
@@ -12,7 +13,7 @@
 
         <div class="modal__body">
 
-          <form name="registerInterest" action="#" method="get" id="registerInterest">
+          <form name="registerInterest" id="registerInterest">
           
             <!-- Adds the undergrad section one partial -->
             {% include "./../courses-partials/undergrad-section-one.njk" %}
@@ -22,10 +23,10 @@
             
 
         </form>
-        <form id="mktoForm_3171" style="display:none"></form>
+        
       </div><!-- /.modal__body -->
    </div><!-- Role Document -->
    
   </div><!-- /#modal -->
 </div><!-- /.overlay -->
-</div><!-- /#content_container_1738577 -->
+<form id="mktoForm_3171" style="display:none"></form>
