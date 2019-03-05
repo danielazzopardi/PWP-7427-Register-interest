@@ -510,7 +510,7 @@
 
   <div class="flexContainer">
     <div class="inputContainer inputContainer--checkbox inputContainer--right">
-      <input type="checkbox" name="opinion-improve" id="opinion-improve">
+      <input type="checkbox" name="opinion-improve" id="opinion-improve" value="true">
       <label for="opinion-improve">I'm interested in sharing my opinion to help Deakin improve student experience</label>
     </div>
   </div>
@@ -559,18 +559,15 @@
 
   <fieldset class="flexContainer section-areaOfInterest section-generic"> 
     <legend class="required">Choose your study area of interest:</legend>
-    <div class="flexContainer flexContainer--wrap">
+    <div class="flexContainer flexContainer--wrap flex--parent">
       <label class="radioButton fakeDropdown flatBottom studyInterest" for="study-interest">
         <div>
         <input type="radio" name="studyInterest" id="study-interest">
-          <span class="js-textReplace no-radio">Select from the list&hellip;</span>
+          <span class="js-textReplace no-radio">Select from the list&hellip;
             <svg class="icon icon-arrow icon-arrow__background">
               <use href="#icon-arrow" xlink:href="#icon-arrow"/>
             </svg>
-          
-        </div>
-        <div>
-          
+          </span>
         </div>
         <div class="flexContainer flexContainer--wrap flexContainer--child">
           <div class="sub-radio">

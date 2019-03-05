@@ -47,7 +47,7 @@
 
   	// console.log('myForm = ' + myForm);	
 
-  	// var courseType = "undergraduate";
+  	var courseType = "postgraduate";
   		
   		if(!courseType == "") {
   		    var research = courseType.search(/research/i),
@@ -96,12 +96,45 @@
   		subscribeButton.on('click', function(){
   		    var fname = $.trim($("#registerInterest input[name=firstName]").val());
   		    personNameContainer.text(fname + '.');
-  		    
+  		    makeAccessible();
   		});
 
   	function closeOverlay() {
   		$('.overlay').removeClass('show');
 	    $('body').removeClass('noscroll');
+  	}
+
+  	function makeAccessible() {
+  		// Keep Tab within Modal
+
+	  	var inputs = $('#modal').find('select, input, textarea, button, a').filter(':visible');
+	  	var firstInput = inputs.first(),
+	  		lastInput = inputs.last();
+
+	  	// set focus on first imput
+	  	firstInput.focus();
+
+	  	// redirect last tab to the first input
+		lastInput.on('keydown', function(e){
+			if((e.which === 9 && !e.shiftKey)) {
+				e.preventDefault();
+				firstInput.focus();
+			}	
+		});
+
+		// redirect first shift+tab to last input
+		firstInput.on('keydown', function (e) {
+		    if ((e.which === 9 && e.shiftKey)) {
+		        e.preventDefault();
+		        lastInput.focus();
+		    }
+		});
+
+		$('.focus').on('keydown', function(e){
+			if((e.which === 9 || e.which === 40 || e.which === 37 || e.which === 38 || e.which === 39 )) {
+				$(this).parent('label').addClass('active');
+			}
+		});
   	}
   	
   	function submitForm() {
@@ -135,7 +168,7 @@
 	            console.log('study Level = ' + studyLevel);
 	            console.log('year Level = ' + yearLevel);
 	              
-	             myForm.onSuccess(function (vals) {	        
+	            myForm.onSuccess(function (vals) {	        
 	                console.log('Form successfully submitted');
 	                console.log('Vals-', vals);
 	                return false;
@@ -261,9 +294,8 @@
   		e.preventDefault();
   		overlay.addClass('show');
   		body.addClass('noscroll');
-  			
-		var registerForm = $('form#registerInterest');
-		// console.log('this is it - ' + myForm);	
+  		
+  		makeAccessible();
   	
   	});
 
@@ -310,44 +342,72 @@
   		var sss= $('.secondary-school-student');
   	
   		$('.added-text').html("");		// clear value
+  		console.log('selected value is = ' + selectedValue);
   		sss.append('<span class="added-text">' + selectedValue + '</span>');
   	});
 
   	$('input:radio[name=subject]').on('change', function(){
   		var selectedValue = $(this).next('span').text();
   		var textReplaceContainer = $('.js-textReplace');
-
-  		textReplaceContainer.text(selectedValue);
+  		var textReplaceHtml = '<span class="js-textReplace no-radio">' + selectedValue + '<svg class="icon icon-arrow icon-arrow__background"><use href="#icon-arrow" xlink:href="#icon-arrow"/></svg></span>';
+  		
+  		textReplaceContainer.html(textReplaceHtml);
+  		$(this).closest('.fakeDropdown').removeClass('open filled');
   	});
 
   	// Handling custom radio button styling
   	$('input:radio').on("click", function(){
-  		// console.log('input:radio clicked');
+  		console.log($(this).attr('name'));
+  		// handle sub-radio status on change of options
+  		var describesYou = $('input#secondary-student').attr('id'),
+			whichRadio = $(this).attr('id');
+
+		switch(whichRadio) {
+			case 'y12':
+				var whichRadioType =  'secondary-student';
+				break;
+			case 'y11':
+				var whichRadioType =  'secondary-student';
+				break;
+			case 'y10':
+				var whichRadioType =  'secondary-student';
+				break;
+			case 'y9':
+				var whichRadioType =  'secondary-student';
+				break;
+			case 'y8':
+				var whichRadioType =  'secondary-student';
+				break;
+			case 'y7':
+				var whichRadioType =  'secondary-student';
+				break;
+			case 'early':
+				var whichRadioType =  'secondary-student';
+				break;
+		}
+
+		if(($(this).attr('name') == 'secondary-school') || ($(this).attr('id') == 'secondary-student') || ($(this).attr('name') == 'subject') || ($(this).attr('name') == 'studyInterest')) {
+			console.log($(this).attr('name') + ' clicked');
+		} else {
+			$('.sub-radio').find('.optionSelected').removeClass('optionSelected');
+			$('.sub-radio input').prop('checked', false);
+		}
+	  	
+
 	  	if($(this).is(':checked')) {
 	  		$('input:radio:not(:checked)').parent().removeClass('optionSelected');
 	  		$('input:radio:not(:checked)').parent().eq(2).removeClass('optionSelected');
 	  		$(this).parent().addClass('optionSelected');
-	  		$('input:radio:not(:checked)').closest('label').removeClass('optionSelected');
 	  	}
 
 	  	if($('.radioButton.fakeDropdown > div > input[type=radio]').is(':checked')) {
-  			$('.radioButton.fakeDropdown').addClass('optionSelected');
+  			$(this).closest('.radioButton.fakeDropdown').addClass('optionSelected');
   		} else {
   			$('.radioButton.fakeDropdown').removeClass('optionSelected');
   		}
 
-  		if($('.sub-radio .radioButton input[type=radio]').is(':checked')) {
-  			// var btnchecked = $(this).attr('id');
-  			// var btncheckedparent = btnchecked.parent();
-
-  			console.log('button pressed is ' + $(this).closest('label'));
-  			// console.log('button pressed parent is ' + btncheckedparent);
-  			$('.sub-radio .radioButton').removeClass('optionSelected');
-  			$('.sub-radio input:radio:checked').parent().addClass('optionSelected');
-  		}
   	});
   	
-
   	$('input:checkbox').on('click', function(){
   		if(!$(this).is(':checked')) {
   			$(this).parent().removeClass('optionSelected');
@@ -375,7 +435,9 @@
   			$('label.error').remove();
   		}
   	});
-  	
+
+
+  	  	
   });
 
 })(jQuery, window, document);
